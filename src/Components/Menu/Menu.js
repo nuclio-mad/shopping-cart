@@ -7,7 +7,7 @@ export const Menu = () => {
       <h1>Nuclio shop</h1>
       <div>
         <Link className="link" to="/">Home</Link>
-        <Link className="link" to="">Carrito</Link>
+        <Link className="link" to="/cart">Carrito</Link>
       </div>
     </div>
   )
