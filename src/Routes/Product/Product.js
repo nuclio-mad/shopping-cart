@@ -1,10 +1,12 @@
 import axios from "axios"
 import { useEffect, useState } from "react"
 import { useParams } from "react-router-dom"
+import { useCart } from "../../Contexts/Cart"
 import './product.css'
 
 export const Product = () => {
-  let { id } = useParams()
+  const { id } = useParams()
+  const cartContext = useCart()
 
   const [product, setProduct] = useState()
 
@@ -15,7 +17,10 @@ export const Product = () => {
       })
   }, [id])
 
-  console.log(product)
+  const addToCart = () => {
+    cartContext.addProduct(product)
+  }
+
   if (!product) {
     return null
   }
@@ -28,6 +33,7 @@ export const Product = () => {
       <div className="info">
         <h1 className="title">{product.title}</h1>
         <p className="description">{product.description}</p>
+        <button onClick={addToCart}>Add to cart</button>
       </div>
     </div>
   )
