@@ -1,0 +1,15 @@
+.productCard {
+  width: 300px;
+  border: 1px solid;
+  border-radius: 10px;
+  margin: 10px;
+}
+
+.productCard .image {
+  text-align: center;
+}
+
+.productCard .image img {
+  max-width: 300px;
+  max-height: 300px;
+}

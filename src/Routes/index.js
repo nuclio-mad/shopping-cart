@@ -3,7 +3,7 @@ import {
   Switch,
   Route,
 } from "react-router-dom";
-import { Home } from './Home'
+import { Home } from './Home/Home'
 import { Product } from "./Product/Product";
 import { Menu } from '../Components/Menu/Menu'
 
