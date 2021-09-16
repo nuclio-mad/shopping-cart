@@ -7,7 +7,7 @@ export const Home = () => {
   const [products, setProducts] = useState([])
 
   useEffect(() => {
-    axios.get('https://fakestoreapi.com/products')
+    axios.get(`${process.env.REACT_APP_API}/products`)
       .then((response) => {
         setProducts(response.data)
       })

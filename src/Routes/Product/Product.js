@@ -11,7 +11,7 @@ export const Product = () => {
   const [product, setProduct] = useState()
 
   useEffect(() => {
-    axios.get(`https://fakestoreapi.com/products/${id}`)
+    axios.get(`${process.env.REACT_APP_API}/products/${id}`)
       .then((response) => {
         setProduct(response.data)
       })
