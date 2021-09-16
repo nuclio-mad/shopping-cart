@@ -4,7 +4,7 @@ import {
   Route,
 } from "react-router-dom";
 import { Home } from './Home'
-import { Product } from "./Product";
+import { Product } from "./Product/Product";
 import { Menu } from '../Components/Menu/Menu'
 
 export const Router = () => {
